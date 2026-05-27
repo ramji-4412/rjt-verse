@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAM JI TRIVEDI — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ LOADER ═══════════════════════════════ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-text">RJT</span>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ SCROLL-TO-TOP ═══════════════════════════ -->
+  <button id="scrollTop" aria-label="Scroll to top" title="Back to top">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+  <!-- ══════════════════════════════ NAVBAR ════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Home">RJT</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Dark / Light toggle -->
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle colour theme">
+        <span class="theme-icon sun"><i class="ph ph-sun"></i></span>
+        <span class="theme-icon moon"><i class="ph ph-moon"></i></span>
+      </button>
+      <!-- Hamburger -->
+      <button id="menuToggle" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div id="menuOverlay" class="menu-overlay"></div>
+
+  <!-- ═══════════════════════════════ HERO ═════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <!-- Animated background grid -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-lines"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Hello, I'm</p>
+      <h1 class="hero-name reveal">
+        <span>RAM JI</span>
+        <em>TRIVEDI</em>
+      </h1>
+
+      <!-- Typing effect container -->
+      <div class="hero-title reveal" aria-live="polite">
+        <span id="typingText"></span><span class="cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-tagline reveal">
+        Crafting elegant digital experiences at the intersection of design&nbsp;&amp;&nbsp;code.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="ph ph-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+
+      <!-- Floating stats
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <strong>5+</strong>
+          <span>Years Exp.</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <strong>40+</strong>
+          <span>Projects</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <strong>15+</strong>
+          <span>Clients</span>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+      <div class="mouse"><div class="wheel"></div></div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-label reveal">01. About</div>
+
+      <div class="about-grid">
+        <!-- Photo -->
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo">
+            <!-- Placeholder avatar using CSS -->
+            <div class="avatar-placeholder" aria-label="Profile photo placeholder">
+              <i class="ph ph-user"></i>
+            </div>
+          </div>
+          <div class="photo-decoration" aria-hidden="true"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <h2 id="about-heading" class="section-title reveal">
+            Passionate about<br /><em>building things</em> that matter.
+          </h2>
+          <p class="reveal">
+            I’m a B.Tech 3rd Year Electronics & Communication Engineering student with a strong interest in technology, design, and problem-solving. I have knowledge of VLSI and Front-end Development, and I enjoy building clean, responsive, and user-friendly web experiences. Passionate about learning and innovation, I’m currently exploring the world of AI while working toward becoming a full-stack developer. Beyond academics and coding, I enjoy solving challenging problems, exploring new technologies, and continuously improving my technical and creative skills.
+          </p>
+          <!-- <p class="reveal">
+            When I'm not pushing pixels or wrangling APIs, you'll find me hiking the Marin headlands,
+            reading about design history, or brewing unnecessarily complicated pour-overs.
+          </p> -->
+
+          <div class="about-chips reveal">
+              <span class="chip">VLSI Enthusiast</span>
+              <span class="chip">Front-end Developer</span>
+              <span class="chip">Problem Solver</span>
+              <span class="chip">AI Explorer</span>
+              <span class="chip">Aspiring Full-Stack Developer</span>
+              <span class="chip">Continuous Learner</span>
+          </div>
+
+          <a href="#" class="btn btn-primary reveal" download aria-label="Download resume PDF">
+            <i class="ph ph-download-simple"></i>
+            <span>Download Résumé</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ EDUCATION ═════════════════════════════ -->
+  <section id="education" aria-labelledby="edu-heading">
+    <div class="container">
+      <div class="section-label reveal">02. Education</div>
+      <h2 id="edu-heading" class="section-title reveal">Academic <em>Background</em></h2>
+
+      <div class="timeline">
+        <!-- Item 1 -->
+        <article class="timeline-item reveal" aria-label="Education at Stanford University">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Secondary Education</h3>
+                <p class="institution">SR Global School</p>
+              </div>
+              <span class="timeline-badge">2019 – 2020</span>
+            </div>
+            <!-- <p>Specialisation in Human-Computer Interaction &amp; Machine Learning. Thesis on adaptive
+               UI systems for accessibility.</p> -->
+            <div class="timeline-tags">
+              <span>%age: 94%</span>
+              <span>Distinction</span>
+              <!-- <span>Research Scholar</span> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="timeline-item reveal" aria-label="Education at UC Berkeley">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Senior Secondary Education</h3>
+                <p class="institution">SR Global School</p>
+              </div>
+              <span class="timeline-badge">2022 – 2023</span>
+            </div>
+            <!-- <p>Core studies in algorithms, systems programming, and web technologies. Minor in
+               Cognitive Science.</p> -->
+            <div class="timeline-tags">
+              <span>%age: 87%</span>
+              <span>Distinction</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" aria-label="Education at UC Berkeley">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>B.Tech Electronics and Communication Engineering</h3>
+                <p class="institution">KIET Group of Institutions</p>
+              </div>
+              <span class="timeline-badge">2020 – 2022</span>
+            </div>
+            <p>Pursuing B.Tech in Electronics & Communication Engineering with interests in
+            VLSI, Front-end Development, Problem Solving, and Artificial Intelligence.
+            Actively exploring modern web technologies and aspiring to become a full-stack developer.</p>
+            <div class="timeline-tags">
+              <span>GPA 9.0</span>
+              <span>Academic Excellence Award</span>
+              <span>VLSI Enthusiast</span>
+              <span>Problem Solver</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ EXPERIENCE ════════════════════════════ -->
+  <section id="experience" aria-labelledby="exp-heading">
+    <div class="container">
+      <div class="section-label reveal">03. Experience</div>
+      <h2 id="exp-heading" class="section-title reveal">Work <em>History</em></h2>
+
+      <div class="experience-list">
+        <!-- Job 1 -->
+        <article class="exp-card glass-card reveal" aria-label="Frontend Developer at Oasis Infobyte">
+          <div class="exp-meta">
+            <span class="exp-year">Jul-2025 – Aug-2025</span>
+            <span class="exp-type">Internship</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-logo" aria-hidden="true"><i class="ph ph-lightning"></i></div>
+            <div>
+              <h3>Frontend Developer</h3>
+              <p class="exp-company">Oasis Infobyte · Remote</p>
+              <p></p>
+              <div class="exp-tags">
+                <span>HTML</span><span>CSS</span><span>JavScript</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Job 2 -->
+        <article class="exp-card glass-card reveal" aria-label="Frontend Developer at IBM">
+          <div class="exp-meta">
+            <span class="exp-year">Aug-2025 – Oct-2025</span>
+            <span class="exp-type">Internship</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-logo" aria-hidden="true"><i class="ph ph-house-simple"></i></div>
+            <div>
+              <h3>Frontend Developer</h3>
+              <p class="exp-company">IBM · Remote</p>
+              <p></p>
+              <div class="exp-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Job 3 -->
+        <article class="exp-card glass-card reveal" aria-label="Cyber Security & AI Intern at Edunet Foundation + VOIS">
+          <div class="exp-meta">
+            <span class="exp-year">Dec-2025 – Jan-2026</span>
+            <span class="exp-type">Internship</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-logo" aria-hidden="true"><i class="ph ph-google-logo"></i></div>
+            <div>
+              <h3>Cyber Security & AI Intern</h3>
+              <p class="exp-company">Edunet Foundation + VOIS · Remote</p>
+              <p>Completed a 4-week virtual internship on Cybersecurity with Generative AI organized by the AICTE, Vodafone Idea Foundation, and Edunet Foundation. Gained hands-on experience with Kali Linux, ethical hacking concepts, and network security analysis. Also developed and deployed a Machine Learning-based Intrusion Detection System (IDS) using Hugging Face Spaces.</p>
+              <div class="exp-tags">
+                <span>Python</span><span>Machine Learning</span><span>Cyber Security</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Job 4 -->
+        <article class="exp-card glass-card reveal" aria-label="Virtual Intern at ServiceNow">
+          <div class="exp-meta">
+            <span class="exp-year">Mar-2026 – Apr-2026</span>
+            <span class="exp-type">Internship</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-logo" aria-hidden="true"><i class="ph ph-google-logo"></i></div>
+            <div>
+              <h3>Virtual Intern</h3>
+              <p class="exp-company">ServiceNow · Remote</p>
+              <p>Completed a hands-on virtual internship on the ServiceNow platform, focusing on enterprise service management and workflow automation. Gained practical experience in ServiceNow Administration, Flow Designer, Automated Test Framework (ATF), and dashboard reporting. Also explored Agentic AI concepts and ITSM practices while strengthening skills in building scalable digital solutions.</p>
+              <div class="exp-tags">
+                <span>ServiceNow Administration</span><span>ServiceNow</span><span>IT Service Management</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ PROJECTS ══════════════════════════════ -->
+  <section id="projects" aria-labelledby="proj-heading">
+    <div class="container">
+      <div class="section-label reveal">04. Projects</div>
+      <h2 id="proj-heading" class="section-title reveal">Featured <em>Work</em></h2>
+
+      <div class="projects-grid">
+
+        <!-- Card 1 -->
+        <article class="project-card glass-card reveal" aria-label="Project: Plant Disease Detection">
+          <div class="project-img" style="--hue:220" aria-hidden="true">
+            <div class="project-img-inner">
+              <i class="ph ph-chart-line-up"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>TensorFlow/Keras</span><span>NumPy</span><span>Gradio</span></div>
+            <h3>Plant Disease Detection</h3>
+            <p>A machine learning-based application for identifying plant diseases from images, providing early detection and treatment recommendations.</p>
+            <div class="project-links">
+              <a href="https://github.com/ramji-4412/plant-disease-detection" class="btn-icon" aria-label="View GitHub repository">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="https://huggingface.co/spaces/ramji-4412/plant-disease-detection" class="btn-icon" aria-label="View live demo">
+                <i class="ph ph-arrow-square-out"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card glass-card reveal" aria-label="Project: Intrusion Detection System">
+          <div class="project-img" style="--hue:280" aria-hidden="true">
+            <div class="project-img-inner">
+              <i class="ph ph-paint-brush"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Machine Learning</span><span>Kali/Linux</span></div>
+            <h3>Intrusion Detection System</h3>
+            <p>A machine learning-based system for detecting and preventing unauthorized access to computer networks.</p>
+            <div class="project-links">
+              <a href="https://github.com/ramji-4412/Instrusion-Detection-System" class="btn-icon" aria-label="View GitHub repository">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="https://huggingface.co/spaces/ramji-4412/Intrusion_Detection_System" class="btn-icon" aria-label="View live demo">
+                <i class="ph ph-arrow-square-out"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card glass-card reveal" aria-label="Project: Recipe-Hub">
+          <div class="project-img" style="--hue:160" aria-hidden="true">
+            <div class="project-img-inner">
+              <i class="ph ph-chat-centered-dots"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+            <br>
+            <h3>Recipe-Hub</h3>
+            <p>A social platform for sharing and discovering recipes. Users can create profiles, follow others, and engage with a community of food enthusiasts.</p>
+            <div class="project-links">
+              <a href="https://github.com/ramji-4412/RECIPE-HUB" class="btn-icon" aria-label="View GitHub repository">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="https://ramji-4412.github.io/RECIPE-HUB/" class="btn-icon" aria-label="View live demo">
+                <i class="ph ph-arrow-square-out"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4
+        <article class="project-card glass-card reveal" aria-label="Project: Luminary OS">
+          <div class="project-img" style="--hue:30" aria-hidden="true">
+            <div class="project-img-inner">
+              <i class="ph ph-device-mobile"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>React Native</span><span>Expo</span><span>Supabase</span></div>
+            <h3>Luminary OS</h3>
+            <p>A personal productivity app inspired by macOS. Features a command palette, habit
+               tracker, and Pomodoro timer — all offline-first.</p>
+            <div class="project-links">
+              <a href="https://github.com/ramji-4412/Luminary-OS" class="btn-icon" aria-label="View GitHub repository">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="#" class="btn-icon" aria-label="View live demo">
+                <i class="ph ph-arrow-square-out"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article> -->
+
+        <!-- Card 5 -->
+        <!-- <article class="project-card glass-card reveal" aria-label="Project: Meridian API">
+          <div class="project-img" style="--hue:0" aria-hidden="true">
+            <div class="project-img-inner">
+              <i class="ph ph-code"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Node.js</span><span>Fastify</span><span>Redis</span></div>
+            <h3>Meridian API</h3>
+            <p>A blazing-fast REST &amp; GraphQL gateway with built-in rate limiting, JWT auth, and
+               auto-generated OpenAPI documentation.</p>
+            <div class="project-links">
+              <a href="#" class="btn-icon" aria-label="View GitHub repository">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="#" class="btn-icon" aria-label="View live demo">
+                <i class="ph ph-arrow-square-out"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article> -->
+
+        <!-- Card 6 -->
+        <!-- <article class="project-card glass-card reveal" aria-label="Project: Polaris CMS">
+          <div class="project-img" style="--hue:190" aria-hidden="true">
+            <div class="project-img-inner">
+              <i class="ph ph-stack"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>SvelteKit</span><span>PocketBase</span><span>Cloudflare</span></div>
+            <h3>Polaris CMS</h3>
+            <p>A headless CMS with a visual block editor. Deployed on Cloudflare Pages with edge-cached
+               content delivery for sub-50 ms TTFB globally.</p>
+            <div class="project-links">
+              <a href="#" class="btn-icon" aria-label="View GitHub repository">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="#" class="btn-icon" aria-label="View live demo">
+                <i class="ph ph-arrow-square-out"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article> -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ SKILLS ══════════════════════════════ -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-label reveal">05. Skills</div>
+      <h2 id="skills-heading" class="section-title reveal">Technical <em>Toolkit</em></h2>
+
+      <div class="skills-wrapper">
+        <!-- Left: progress bars -->
+        <div class="skills-bars">
+          <div class="skill-bar-item reveal">
+            <div class="skill-bar-header">
+              <span>Frontend Development</span><span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend Development 85%">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item reveal">
+            <div class="skill-bar-header">
+              <span>Backend &amp; APIs</span><span class="skill-pct">45%</span>
+            </div>
+            <div class="skill-track" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Backend and APIs 45%">
+              <div class="skill-fill" data-width="45"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item reveal">
+            <div class="skill-bar-header">
+              <span>Problem Solving</span><span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Problem Solving 80%">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item reveal">
+            <div class="skill-bar-header">
+              <span>VLSI & Digital Design</span><span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-track" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="VLSI and Digital Design 78%">
+              <div class="skill-fill" data-width="78"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item reveal">
+            <div class="skill-bar-header">
+              <span>Artificial Intelligence</span><span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-track" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Artificial Intelligence 60%">
+              <div class="skill-fill" data-width="60"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: tech tags cloud -->
+        <div class="skills-tags reveal">
+           <span class="tag tag-lg">HTML</span>
+           <span class="tag">CSS</span>
+           <span class="tag tag-lg">JavaScript</span>
+           <span class="tag">React</span>
+           <span class="tag">Python</span>
+
+           <span class="tag tag-lg">C++</span>
+           <span class="tag">DSA</span>
+           <span class="tag">Git & GitHub</span>
+
+           <span class="tag tag-lg">VLSI</span>
+           <span class="tag">Cadence</span>
+           <span class="tag">Digital Electronics</span>
+
+           <span class="tag tag-lg">AI / ML</span>
+           <span class="tag">Linux</span>
+           <span class="tag">SQL</span>
+           <span class="tag">Node.js</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CERTIFICATIONS ════════════════════════════ -->
+  <section id="certifications" aria-labelledby="cert-heading">
+    <div class="container">
+      <div class="section-label reveal">06. Certifications</div>
+      <h2 id="cert-heading" class="section-title reveal">Credentials &amp; <em>Achievements</em></h2>
+
+      <div class="cert-grid">
+
+        <article class="cert-card glass-card reveal" aria-label="AWS Certified Solutions Architect">
+          <div class="cert-icon" aria-hidden="true"><i class="ph ph-cloud"></i></div>
+          <div class="cert-body">
+            <h3>Web Development Fundamentals</h3>
+            <p class="cert-issuer">IBM</p>
+            <p class="cert-date">Issued Sep 2025</p>
+          </div>
+          <a href="https://www.credly.com/badges/6789f30a-be37-4718-a36b-7bbaa7c76841/linked_in_profile" class="cert-badge" aria-label="View credential">
+            <i class="ph ph-seal-check"></i>
+          </a>
+        </article>
+
+        <article class="cert-card glass-card reveal" aria-label="Google UX Design Professional Certificate">
+          <div class="cert-icon" aria-hidden="true"><i class="ph ph-google-logo"></i></div>
+          <div class="cert-body">
+            <h3>VLSI for Beginners</h3>
+            <p class="cert-issuer">NIELIT</p>
+            <p class="cert-date">Issued Dec 2025</p>
+          </div>
+          <a href="https://drive.google.com/file/d/1ouodGCpPPIEVUQ2EZe3YbbIxVYMgW8aU/view?usp=sharing" class="cert-badge" aria-label="View credential">
+            <i class="ph ph-seal-check"></i>
+          </a>
+        </article>
+
+        <article class="cert-card glass-card reveal" aria-label="Meta Frontend Developer Professional Certificate">
+          <div class="cert-icon" aria-hidden="true"><i class="ph ph-meta-logo"></i></div>
+          <div class="cert-body">
+            <h3>Getting Started with Artificial Intelligence</h3>
+            <p class="cert-issuer">IBM</p>
+            <p class="cert-date">Issued Feb 2026</p>
+          </div>
+          <a href="https://www.credly.com/earner/earned/badge/5eef1118-a349-41fd-aa66-c583b3caeed6" class="cert-badge" aria-label="View credential">
+            <i class="ph ph-seal-check"></i>
+          </a>
+        </article>
+
+        <!-- <article class="cert-card glass-card reveal" aria-label="TensorFlow Developer Certificate">
+          <div class="cert-icon" aria-hidden="true"><i class="ph ph-brain"></i></div>
+          <div class="cert-body">
+            <h3>TensorFlow Developer Certificate</h3>
+            <p class="cert-issuer">Google</p>
+            <p class="cert-date">Issued Sep 2022</p>
+          </div>
+          <a href="#" class="cert-badge" aria-label="View credential">
+            <i class="ph ph-seal-check"></i>
+          </a>
+        </article> -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ══════════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-label reveal">07. Contact</div>
+      <h2 id="contact-heading" class="section-title reveal">Let's <em>Connect</em></h2>
+      <p class="contact-sub reveal">
+        Have a project in mind or just want to say hi? My inbox is always open.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-wrap glass-card reveal">
+          <!-- Note: this form is purely presentational (no backend) -->
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary btn-full" id="sendBtn" aria-label="Send message">
+            <span>Send Message</span>
+            <i class="ph ph-paper-plane-tilt"></i>
+          </button>
+        </div>
+
+        <!-- Info panel -->
+        <div class="contact-info reveal">
+          <div class="contact-detail">
+            <div class="contact-icon" aria-hidden="true"><i class="ph ph-envelope-simple"></i></div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:ramjitrivedi1801@gmail.com">ramjitrivedi1801@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon" aria-hidden="true"><i class="ph ph-map-pin"></i></div>
+            <div>
+              <strong>Location</strong>
+              <span>Ghaziabad, Uttar Pradesh</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon" aria-hidden="true"><i class="ph ph-clock"></i></div>
+            <div>
+              <strong>Availability</strong>
+              <span>Open to opportunities</span>
+            </div>
+          </div>
+
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://github.com/ramji-4412" class="social-btn" aria-label="GitHub profile">
+              <i class="ph ph-github-logo"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ram-ji-trivedi-4412-ramanu/" class="social-btn" aria-label="LinkedIn profile">
+              <i class="ph ph-linkedin-logo"></i>
+            </a>
+            <a href="https://x.com/ramji_4412" class="social-btn" aria-label="Twitter profile">
+              <i class="ph ph-x-logo"></i>
+            </a>
+            <!-- <a href="#" class="social-btn" aria-label="Dribbble profile">
+              <i class="ph ph-dribbble-logo"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo" aria-label="Back to top">RJT</a>
+      <p class="footer-copy">
+        Designed &amp; built by <strong>Ram Ji Trivedi</strong> ·
+        <span id="footerYear"></span>
+      </p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
